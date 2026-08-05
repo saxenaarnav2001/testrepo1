@@ -1,0 +1,35 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://example.com/vex/benchmark-repo-1-vex",
+  "author": "Security Engineering Team",
+  "timestamp": "2026-08-05T00:00:00Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "GHSA-1111-2222-3333"
+      },
+      "products": [
+        {
+          "@id": "pkg:npm/got@11.8.2"
+        }
+      ],
+      "status": "affected",
+      "justification": "vulnerable_code_not_present",
+      "impact_statement": "Got dependency is listed in package.json for future integration but is not imported or called anywhere in the codebase."
+    },
+    {
+      "vulnerability": {
+        "name": "GHSA-43fc-jf86-j433"
+      },
+      "products": [
+        {
+          "@id": "pkg:npm/axios@0.21.1"
+        }
+      ],
+      "status": "not_affected",
+      "justification": "inline_mitigations_already_exist",
+      "impact_statement": "Header leakage is mitigated via explicit request interceptors and domain sanitization in API gateway."
+    }
+  ]
+}
